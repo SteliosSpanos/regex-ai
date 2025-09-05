@@ -62,12 +62,12 @@ $ regexai "email addresses"
    ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
 
 📝 Explanation:
-   Matches standard email addresses with alphanumeric characters, dots, underscores, plus signs, and hyphens
+   Matches standard email addresses with alphanumeric characters, dots, underscores, plus signs and hyphens
 
 ✅ Example matches:
-   • user@example.com
-   • test.email+tag@domain.co.uk
-   • simple@test.org
+   - user@example.com
+   - test.email+tag@domain.co.uk
+   - simple@test.org
 ```
 
 ### Phone Numbers with Testing
@@ -81,9 +81,9 @@ $ regexai "US phone numbers" --test "(555) 123-4567"
    Matches US phone numbers in various formats with optional parentheses and separators
 
 ✅ Example matches:
-   • (555) 123-4567
-   • 555-123-4567
-   • 555.123.4567
+   - (555) 123-4567
+   - 555-123-4567
+   - 555.123.4567
 
 🧪 Testing: '(555) 123-4567'
    ✅ Match found!
@@ -170,28 +170,6 @@ regexai "email addresses" --test "test@sub.domain.org"
 regexai "complex date formats" --explain
 ```
 
-## 🤝 Contributing
-
-We love contributions! Here are ways to help:
-
-### 🟢 Good First Issues
-- Add more common patterns to the database
-- Improve error messages and user experience
-- Add tests for edge cases
-- Enhance pattern explanations
-
-### 🟡 Medium Complexity
-- Add interactive mode for pattern refinement
-- Implement pattern saving/loading
-- Add support for different regex flavors
-- Create pattern validation improvements
-
-### 🔴 Advanced Features
-- Web interface for non-CLI users
-- VS Code extension integration
-- Pattern performance optimization
-- Multiple AI model support
-
 ## 📝 Development
 
 ### Setup Development Environment
@@ -266,26 +244,10 @@ RegexAI is designed for efficiency:
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- [OpenAI](https://openai.com/) for providing the GPT-4 API
-- The regex community for inspiration and pattern examples
-- All contributors who help improve this tool
-
 ## 🌟 Star History
 
 If RegexAI helps you, please give it a star! ⭐
 
 ---
 
-**Made with ❤️ for developers who want to spend less time on regex and more time building amazing things.**
-
-## 📞 Support
-
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/SteliosSpanos/regexai/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/SteliosSpanos/regexai/discussions)
-- 📧 **Contact**: stylspan19@gmail.com
-
----
-
-*Never write regex manually again!* 🎯
+**Made with ❤️ for developers who want to spend less time on regex and more time building amazing things!!**
