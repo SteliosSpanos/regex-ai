@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regexai"
+version = "1.0.0"
+description = "AI-powered CLI tool that converts English descriptions to regex patterns"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Stelios Spanos", email = "stylspan19@gmail.com"}
+]
+keywords = ["regex", "ai", "cli", "developer-tools", "openai", "pattern-matching"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+    "Topic :: Utilities",
+    "Environment :: Console",
+]
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SteliosSpanos/regexai"
+Repository = "https://github.com/SteliosSpanos/regexai.git"
+Issues = "https://github.com/SteliosSpanos/regexai/issues"
+Documentation = "https://github.com/SteliosSpanos/regexai#readme"
+
+[project.scripts]
+regexai = "regexai:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[tool.setuptools]
+py-modules = ["regexai"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
