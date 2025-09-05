@@ -30,7 +30,7 @@ class RegexAI:
                 self._test_pattern(common_pattern["pattern"], test_string)
             return
 
-        prompt = self._buil_prompt(description)
+        prompt = self._build_prompt(description)
 
         if dry_run:
             print(f"🔍 Prompt that would be sent to AI:\n")
@@ -65,7 +65,7 @@ class RegexAI:
         except Exception as e:
             print(f"❌ Error generating regex: {e}")
 
-    def check_common_patterns(self, description):
+    def _check_common_patterns(self, description):
         """Check if description matches common patterns"""
         common_patterns = {
             "email" : {
