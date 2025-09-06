@@ -39,7 +39,7 @@ class RegexAI:
             print("=" * 50)
             return
 
-        print(f"🤖 Generating regex for: {description}")
+        print(f"🔧 Generating regex for: {description}")
 
         try:
             response = openai.chat.completions.create(
