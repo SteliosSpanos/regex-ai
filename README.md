@@ -198,7 +198,6 @@ regexai/
 ├── pyproject.toml     # Package configuration
 ├── .env               # API key (create this)
 ├── README.md          # Documentation
-└── tests/             # Test files (coming soon)
 ```
 
 ## 🐛 Troubleshooting
