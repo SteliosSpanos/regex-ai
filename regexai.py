@@ -92,9 +92,18 @@ class RegexAI:
                 "pattern" : r"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\d{4}$",
                 "explanation" : "Matches dates in MM/DD/YYYY format.",
                 "examples" : ["01/15/2024", "12/31/2023", "06/08/1990"]
+            },
+            "directory" : {
+                "pattern" : r"^(\/[a-zA-Z0-9._-]+)+\/?$",
+                "explanation" : "Matches Linux directory paths. It starts with a forward slash (/), followed by one or more alphanumeric characters, periods, underscores, or hyphens. This pattern can repeat multiple times, each time separated by a forward slash. The path can optionally end with a forward slash.",
+                "examples" : ["/home/user/", "/etc/", "/usr/local/bin"]
+            },
+            "path" : {
+                "pattern" : r"^[A-Za-z]:[\\\/](?:[^<>:\"|?*\r\n]+[\\\/])*[^<>:\"|?*\r\n]*$",
+                "explanation" : "Matches Windows paths. It starts with a drive letter (a-z or A-Z) followed by a colon and a backslash. Then it matches any number of directories, each of which is a string of characters that does not include the forbidden characters, followed by a backslash. Finally, it matches a file name, which is a string of characters that does not include the forbidden characters.",
+                "examples" : ["C:\\Users\\JohnDoe\\Documents\\file.txt", "D:\\Program Files\\SomeApp\\app.exe", "G:\\Music\\song.mp3"]
             }
         }
-
         desc_lower = description.lower()
         for key, pattern_info in common_patterns.items():
             if key in desc_lower or any(variant in desc_lower for variant in [
