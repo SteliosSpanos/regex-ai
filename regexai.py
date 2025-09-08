@@ -92,11 +92,6 @@ class RegexAI:
                 "pattern" : r"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\d{4}$",
                 "explanation" : "Matches dates in MM/DD/YYYY format.",
                 "examples" : ["01/15/2024", "12/31/2023", "06/08/1990"]
-            },
-            "Linux file path" : {
-                "pattern" : r"^(\/[^\/\0]+)*\/?$",
-                "explanation" : "This pattern matches file paths on Linux. It starts with a forward slash (/), followed by any character that is not a forward slash or a null character (\0) and ends with an optional forward slash.",
-                "examples" : ["/home/user/documents", "/var/log/syslog", "/etc/passwd"]
             }
         }
 
