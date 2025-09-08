@@ -70,28 +70,33 @@ class RegexAI:
         common_patterns = {
             "email" : {
                 "pattern" : r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
-                "explanation" : "Matches standard email addresses with alphanumeric characters, dots, underscores, plus signs and hyphens",
+                "explanation" : "Matches standard email addresses with alphanumeric characters, dots, underscores, plus signs and hyphens.",
                 "examples" : ["user@example.com", "test.email+tag@domain.co.uk", "simple@test.org"]
             },
             "phone" : {
                 "pattern" : r"^\+?[1-9]\d{1, 14}$",
-                "explanation" : "Matches international phone numbers with optional plus sign and 2-15 digits",
+                "explanation" : "Matches international phone numbers with optional plus sign and 2-15 digits.",
                 "examples" : ["+1234567890", "1234567890", "+441234567890"]
             },
             "url" : {
                 "pattern" : r"^https?://[^\s]+$",
-                "explanation" : "Matches HTTP and HTTPS URLs",
+                "explanation" : "Matches HTTP and HTTPS URLs.",
                 "examples" : ["https://example.com", "http://test.org/path", "https://sub.domain.com/page?query=value"]
             },
             "ip" : {
                 "pattern" : r"^(?:[0-9]{1, 3}\.){3}[0-9]{1, 3}$",
-                "explanation" : "Matches IPv4 addresses (basic format validation)",
+                "explanation" : "Matches IPv4 addresses (basic format validation).",
                 "examples" : ["192.168.1.1", "10.0.0.1", "172.16.254.1"]
             },
             "date" : {
                 "pattern" : r"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\d{4}$",
-                "explanation" : "Matches dates in MM/DD/YYYY format",
+                "explanation" : "Matches dates in MM/DD/YYYY format.",
                 "examples" : ["01/15/2024", "12/31/2023", "06/08/1990"]
+            },
+            "Linux file path" : {
+                "pattern" : r"^(\/[^\/\0]+)*\/?$",
+                "explanation" : "This pattern matches file paths on Linux. It starts with a forward slash (/), followed by any character that is not a forward slash or a null character (\0) and ends with an optional forward slash.",
+                "examples" : ["/home/user/documents", "/var/log/syslog", "/etc/passwd"]
             }
         }
 
