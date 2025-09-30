@@ -10,8 +10,8 @@ class RegexAI:
         load_dotenv()
         self.api_key = os.getenv("OPENAI_API_KEY")
         if not self.api_key:
-            print("❌ Error: OPENAI_API_KEY not found in environment")
-            print("💡 Create a .env file with: OPENAI_API_KEY=your_key_here")
+            print("Error: OPENAI_API_KEY not found in environment")
+            print("Create a .env file with: OPENAI_API_KEY=your_key_here")
             sys.exit(1)
         openai.api_key = self.api_key
 
@@ -24,7 +24,7 @@ class RegexAI:
                 common_pattern["explanation"],
                 common_pattern["examples"]
             )
-            print("💡 Found in common patterns database!")
+            print("\nFound in common patterns database!")
 
             if test_string:
                 self._test_pattern(common_pattern["pattern"], test_string)
@@ -33,13 +33,13 @@ class RegexAI:
         prompt = self._build_prompt(description)
 
         if dry_run:
-            print(f"🔍 Prompt that would be sent to AI:\n")
+            print(f"Prompt that would be sent to AI:\n")
             print("=" * 50)
             print(prompt)
             print("=" * 50)
             return
 
-        print(f"🔧 Generating regex for: {description}")
+        print(f"Generating regex for: {description}")
 
         try:
             response = openai.chat.completions.create(
@@ -61,9 +61,9 @@ class RegexAI:
                 if explain:
                     self._explain_pattern(pattern)
             else:
-                print("❌ Failed to generate valid regex pattern")
+                print("Failed to generate valid regex pattern")
         except Exception as e:
-            print(f"❌ Error generating regex: {e}")
+            print(f"Error generating regex: {e}")
 
     def _check_common_patterns(self, description):
         """Check if description matches common patterns"""
@@ -92,16 +92,6 @@ class RegexAI:
                 "pattern" : r"^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\d{4}$",
                 "explanation" : "Matches dates in MM/DD/YYYY format.",
                 "examples" : ["01/15/2024", "12/31/2023", "06/08/1990"]
-            },
-            "directory" : {
-                "pattern" : r"^(\/[a-zA-Z0-9._-]+)+\/?$",
-                "explanation" : "Matches Linux directory paths. It starts with a forward slash (/), followed by one or more alphanumeric characters, periods, underscores, or hyphens. This pattern can repeat multiple times, each time separated by a forward slash. The path can optionally end with a forward slash.",
-                "examples" : ["/home/user/", "/etc/", "/usr/local/bin"]
-            },
-            "path" : {
-                "pattern" : r"^[A-Za-z]:[\\\/](?:[^<>:\"|?*\r\n]+[\\\/])*[^<>:\"|?*\r\n]*$",
-                "explanation" : "Matches Windows paths. It starts with a drive letter (a-z or A-Z) followed by a colon and a backslash. Then it matches any number of directories, each of which is a string of characters that does not include the forbidden characters, followed by a backslash. Finally, it matches a file name, which is a string of characters that does not include the forbidden characters.",
-                "examples" : ["C:\\Users\\JohnDoe\\Documents\\file.txt", "D:\\Program Files\\SomeApp\\app.exe", "G:\\Music\\song.mp3"]
             }
         }
         desc_lower = description.lower()
@@ -157,38 +147,38 @@ Generate for: {description}"""
 
     def _display_result(self, pattern, explanation, examples):
         """Display the generated regex result"""
-        print(f"\n🎯 Generated Regex:")
+        print(f"\nGenerated Regex:")
         print(f"   {pattern}")
 
         if explanation:
-            print(f"\n📝 Explanation:")
+            print(f"\nExplanation:")
             print(f"   {explanation}")
 
         if examples:
-            print(f"\n✅ Example matches:")
+            print(f"\nExample matches:")
             for example in examples:
                 print(f"   - {example}")
 
     def _test_pattern(self, pattern, test_string):
         """Test the pattern against a string"""
-        print(f"\n🧪 Testing: '{test_string}'")
+        print(f"\nTesting: '{test_string}'")
 
         try:
             match = re.search(pattern, test_string)
             if match:
-                print("   ✅ Match found!")
+                print("    Match found!")
                 if match.groups():
-                    print(f"   📋 Captured groups: {match.groups()}")
-                print(f"   🎯 Matched text: '{match.group()}'")
+                    print(f"    Captured groups: {match.groups()}")
+                print(f"    Matched text: '{match.group()}'")
             else:
-                print("   ❌ No match found")
+                print("    No match found")
         except re.error as e:
-            print(f"   ❌ Invalid regex pattern: {e}")
+            print(f"     Invalid regex pattern: {e}")
 
     def _explain_pattern(self, pattern):
         """Provide detailed explanation of regex components"""
-        print(f"\n🔍 Pattern Breakdown:")
-        print(f"   Pattern: {pattern}")
+        print(f"\nPattern Breakdown:")
+        print(f"Pattern: {pattern}")
 
         components = []
         if "^" in pattern:
@@ -240,7 +230,7 @@ Common patterns:
 
     args = parser.parse_args()
 
-    print("🚀 RegexAI - English to Regex Generator")
+    print("RegexAI - English to Regex Generator")
     print("=" * 40)
 
     regexai = RegexAI()
