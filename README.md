@@ -58,13 +58,13 @@ regexai "dates in MM/DD/YYYY format" --dry-run
 ```bash
 $ regexai "email addresses"
 
-🎯 Generated Regex:
+Generated Regex:
    ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
 
-📝 Explanation:
+Explanation:
    Matches standard email addresses with alphanumeric characters, dots, underscores, plus signs and hyphens
 
-✅ Example matches:
+Example matches:
    - user@example.com
    - test.email+tag@domain.co.uk
    - simple@test.org
@@ -74,21 +74,21 @@ $ regexai "email addresses"
 ```bash
 $ regexai "US phone numbers" --test "(555) 123-4567"
 
-🎯 Generated Regex:
+Generated Regex:
    ^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$
 
-📝 Explanation:
+Explanation:
    Matches US phone numbers in various formats with optional parentheses and separators
 
-✅ Example matches:
+Example matches:
    - (555) 123-4567
    - 555-123-4567
    - 555.123.4567
 
-🧪 Testing: '(555) 123-4567'
-   ✅ Match found!
-   📋 Captured groups: ('555', '123', '4567')
-   🎯 Matched text: '(555) 123-4567'
+Testing: '(555) 123-4567'
+   Match found!
+   Captured groups: ('555', '123', '4567')
+   Matched text: '(555) 123-4567'
 ```
 
 ### Complex Patterns
