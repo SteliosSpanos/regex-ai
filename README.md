@@ -4,16 +4,16 @@
 
 Never write complex regex patterns manually again! RegexAI uses OpenAI's GPT-4 to transform plain English descriptions into production-ready regular expressions.
 
-## ✨ Features
+## Features
 
-- 🎯 **English to Regex** - Describe what you want in plain English
-- ⚡ **Instant Results** - Get regex patterns in seconds
-- 🧪 **Built-in Testing** - Validate patterns against test strings
-- 📚 **Common Patterns** - Database of frequently used regex patterns
-- 🔍 **Pattern Explanation** - Understand what your regex does
-- 🛠️ **Developer-Friendly** - Simple CLI that fits your workflow
+- **English to Regex** - Describe what you want in plain English
+- **Instant Results** - Get regex patterns in seconds
+- **Built-in Testing** - Validate patterns against test strings
+- **Common Patterns** - Database of frequently used regex patterns
+- **Pattern Explanation** - Understand what your regex does
+- **Developer-Friendly** - Simple CLI that fits your workflow
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -52,7 +52,7 @@ regexai "URLs starting with https" --explain
 regexai "dates in MM/DD/YYYY format" --dry-run
 ```
 
-## 📋 Examples
+## Examples
 
 ### Email Addresses
 ```bash
@@ -101,7 +101,7 @@ $ regexai "social security numbers"
 $ regexai "file paths on Windows"
 ```
 
-## 🎯 Common Use Cases
+## Common Use Cases
 
 RegexAI excels at generating patterns for:
 
@@ -116,7 +116,7 @@ RegexAI excels at generating patterns for:
 - **ZIP codes** - US, international postal codes
 - **Hexadecimal** - Colors, hashes, IDs
 
-## 🛠️ Command Options
+## Command Options
 
 ```bash
 regexai "description" [OPTIONS]
@@ -129,7 +129,7 @@ Options:
   --help, -h          Show help message
 ```
 
-## ⚡ Quick Patterns
+## Quick Patterns
 
 For common patterns, RegexAI includes a built-in database for instant results:
 
@@ -139,7 +139,7 @@ For common patterns, RegexAI includes a built-in database for instant results:
 - `regexai "ip"` - IPv4 addresses
 - `regexai "date"` - MM/DD/YYYY dates
 
-## 🔧 Advanced Usage
+## Advanced Usage
 
 ### Custom Descriptions
 Be specific to get better results:
@@ -170,7 +170,7 @@ regexai "email addresses" --test "test@sub.domain.org"
 regexai "complex date formats" --explain
 ```
 
-## 📝 Development
+## Development
 
 ### Setup Development Environment
 ```bash
@@ -200,7 +200,7 @@ regexai/
 ├── README.md          # Documentation
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -230,23 +230,13 @@ export OPENAI_API_KEY="your_key_here"
 3. **Mention constraints** - "phone numbers with exactly 10 digits"
 4. **Specify format** - "URLs that start with https only"
 
-## 📊 Performance
 
-RegexAI is designed for efficiency:
-
-- ⚡ **Common patterns** - Instant results from built-in database
-- 🤖 **AI generation** - ~2-3 seconds for complex patterns
-- 🧪 **Pattern testing** - Millisecond validation
-- 💾 **Lightweight** - Minimal dependencies
-
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🌟 Star History
-
-If RegexAI helps you, please give it a star! ⭐
 
 ---
 
 **Made with ❤️ for developers who want to spend less time on regex and more time building amazing things!!**
+
