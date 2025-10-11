@@ -1,4 +1,4 @@
-# RegexAI 🤖
+# RegexAI 
 
 **Convert English descriptions to regex patterns using AI**
 
@@ -239,4 +239,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Made with ❤️ for developers who want to spend less time on regex and more time building amazing things!!**
+
 
