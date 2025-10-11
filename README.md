@@ -236,8 +236,5 @@ export OPENAI_API_KEY="your_key_here"
 MIT License - see [LICENSE](LICENSE) file for details.
 
 
----
-
-**Made with ❤️ for developers who want to spend less time on regex and more time building amazing things!!**
 
 
