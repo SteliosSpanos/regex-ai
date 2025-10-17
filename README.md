@@ -2,7 +2,7 @@
 
 **Convert English descriptions to regex patterns using AI**
 
-Never write complex regex patterns manually again! RegexAI uses OpenAI's GPT-4 to transform plain English descriptions into production-ready regular expressions.
+Never write complex regex patterns manually again! RegexAI uses OpenAI's models to transform plain English descriptions into production-ready regular expressions.
 
 ## Features
 
