@@ -21,10 +21,9 @@ Never write complex regex patterns manually again! RegexAI uses OpenAI's GPT-4 t
 # Install from source
 git clone https://github.com/SteliosSpanos/regex-ai.git
 cd regex-ai
-pip install -e .
 
-# Or install directly
-pip install regexai
+# Install dependencies
+pip install -r requirements.txt
 ```
 
 ### Setup
